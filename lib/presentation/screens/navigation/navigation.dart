@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:marketplace/presentation/screens/artikel_screen/artikel.dart';
 import 'package:marketplace/utilities/color.dart';
 import 'package:marketplace/utilities/text_styles.dart';
 
@@ -11,11 +12,20 @@ class Navigation extends StatefulWidget {
 }
 
 class _NavigationState extends State<Navigation> {
+  List pages = const [
+    Text("0"),
+    ArtikelScreen(),
+    Text("3"),
+    Text("4"),
+    Text("5"),
+  ];
   int _selectedItemIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      body: pages[_selectedItemIndex],
       bottomNavigationBar: Container(
         width: size.width,
         color: neutral100,
@@ -51,7 +61,7 @@ class _NavigationState extends State<Navigation> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            index == _selectedItemIndex
+            _selectedItemIndex == index
                 ? Icon(
                     iconActive,
                     color: primary900,
@@ -65,7 +75,7 @@ class _NavigationState extends State<Navigation> {
             ),
             Text(
               text,
-              style: index == _selectedItemIndex
+              style: _selectedItemIndex == index
                   ? text4(primary900, regular)
                   : text4(neutral300, regular),
             )
