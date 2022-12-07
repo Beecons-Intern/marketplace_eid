@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:marketplace/presentation/routes/page_name.dart';
 import 'package:marketplace/utilities/color.dart';
 import 'package:marketplace/utilities/text_styles.dart';
 
@@ -13,7 +13,8 @@ class BuildBody extends StatelessWidget {
       itemCount: 10,
       itemBuilder: (context, index) {
         return GestureDetector(
-          onTap: () {},
+          onTap: () =>
+              Navigator.pushNamed(context, RouteName.detailArtikelScreen),
           child: Padding(
             padding: EdgeInsets.symmetric(
                 vertical: 10, horizontal: size.width * 0.05),

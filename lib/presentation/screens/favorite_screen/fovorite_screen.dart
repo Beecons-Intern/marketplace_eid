@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:marketplace/presentation/screens/artikel_screen/component/Build_body.dart';
-import 'package:marketplace/utilities/color.dart';
-import 'package:marketplace/utilities/text_styles.dart';
-import '../widget/build_app_bar.dart';
 
-class ArtikelScreen extends StatelessWidget {
-  const ArtikelScreen({super.key});
+import '../../../utilities/color.dart';
+import '../../../utilities/text_styles.dart';
+import 'components/build_body.dart';
 
+class FavoriteScreen extends StatefulWidget {
+  const FavoriteScreen({super.key});
+
+  @override
+  State<FavoriteScreen> createState() => _FavoriteScreenState();
+}
+
+class _FavoriteScreenState extends State<FavoriteScreen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -18,11 +23,12 @@ class ArtikelScreen extends StatelessWidget {
         child: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          centerTitle: true,
           title: FormBuilder(
               child: Container(
             decoration: BoxDecoration(
-                color: neutral100, borderRadius: BorderRadius.circular(10)),
+                color: neutral100,
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: neutral300)),
             child: FormBuilderTextField(
               name: "search",
               keyboardType: TextInputType.name,
@@ -36,7 +42,22 @@ class ArtikelScreen extends StatelessWidget {
                   )),
             ),
           )),
-          flexibleSpace: BuildAppbar(size: size),
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                IconlyLight.notification,
+                color: primary900,
+              ),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                IconlyLight.chat,
+                color: primary900,
+              ),
+            ),
+          ],
         ),
       ),
       body: const BuildBody(),
