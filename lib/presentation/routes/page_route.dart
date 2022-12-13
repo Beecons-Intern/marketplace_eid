@@ -1,5 +1,6 @@
 import 'package:marketplace/presentation/routes/page_name.dart';
 import 'package:marketplace/presentation/screens/detail_chat_screen.dart/detail_chat_screen.dart';
+import 'package:marketplace/presentation/screens/detail_history_screen/detail_history_screen.dart';
 import 'package:marketplace/presentation/screens/keranjang_screen/keranjang_screen.dart';
 import 'package:marketplace/presentation/screens/notification_screen/notifikasi_screen.dart';
 
@@ -25,5 +26,6 @@ class AppPage {
     RouteName.detailChat: (context) => const DetailChatScreen(),
     RouteName.keranjang: (context) => const KeranjangScreen(),
     RouteName.notifikasi: (context) => const NotifikasiScreen(),
+    RouteName.detailHistory: (context) => const DetailHistoryScreen(),
   };
 }

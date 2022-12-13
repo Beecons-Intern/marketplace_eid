@@ -22,8 +22,6 @@ class _BuildBodyState extends State<BuildBody> {
     [
       "Selesai",
       "Dibatalkan",
-      "Dikirim",
-      "Tiba Ditujuan",
     ],
     [
       "Dinding",
@@ -113,10 +111,15 @@ class _BuildBodyState extends State<BuildBody> {
                     children: [
                       Row(
                         children: [
-                          const Icon(
-                            Icons.dangerous,
-                            color: neutral300,
-                            size: 35,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: const Icon(
+                              Icons.dangerous,
+                              color: neutral300,
+                              size: 35,
+                            ),
                           ),
                           SizedBox(
                             width: size.width * 0.02,

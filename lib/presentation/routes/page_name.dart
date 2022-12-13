@@ -10,4 +10,5 @@ abstract class RouteName {
   static const detailChat = '/detailChat';
   static const keranjang = '/keranjang';
   static const notifikasi = '/notifikasi';
+  static const detailHistory = '/detailHistory';
 }
