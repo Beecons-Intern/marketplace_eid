@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: AppPage.pages,
-      initialRoute: '/navigation',
+      initialRoute: '/onboarding',
     );
   }
 }

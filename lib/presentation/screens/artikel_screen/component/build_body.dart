@@ -13,8 +13,7 @@ class BuildBody extends StatelessWidget {
       itemCount: 10,
       itemBuilder: (context, index) {
         return GestureDetector(
-          onTap: () =>
-              Navigator.pushNamed(context, RouteName.detailArtikelScreen),
+          onTap: () => Navigator.pushNamed(context, RouteName.detailArtikel),
           child: Padding(
             padding: EdgeInsets.symmetric(
                 vertical: 10, horizontal: size.width * 0.05),

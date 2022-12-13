@@ -1,7 +1,9 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:marketplace/presentation/screens/favorite_screen/components/bottom_sheet/kategori.dart';
+import 'package:marketplace/presentation/screens/favorite_screen/components/bottom_sheet/penawaran.dart';
+import 'package:marketplace/presentation/screens/favorite_screen/components/bottom_sheet/stok.dart';
+import 'package:marketplace/presentation/screens/favorite_screen/components/bottom_sheet/urutkan.dart';
 import 'package:marketplace/utilities/color.dart';
 import 'package:marketplace/utilities/text_styles.dart';
 
@@ -16,6 +18,13 @@ class _BuildBodyState extends State<BuildBody> {
   int selectedItem = 0;
   bool isChecked = false;
   int? isActive;
+
+  List<Widget> kategoriSelected = [
+    const BuildUrutkan(),
+    const BuildPenawaran(),
+    const BuildStok(),
+    const BuildKategori(),
+  ];
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -28,11 +37,10 @@ class _BuildBodyState extends State<BuildBody> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                buildScrollItem("Urutan", IconlyLight.arrowDown2, 0),
-                buildScrollItem("Penawran", IconlyLight.arrowDown2, 1),
-                buildScrollItem("Stok", IconlyLight.arrowDown2, 2),
-                buildScrollItem("Kategori", IconlyLight.arrowDown2, 3),
-                buildScrollItem("Barang", IconlyLight.arrowDown2, 4),
+                buildmenuItem(0, "Urutan", size),
+                buildmenuItem(1, "Penawaran", size),
+                buildmenuItem(2, "Stok", size),
+                buildmenuItem(3, "Kategori", size),
               ],
             ),
           ),
@@ -229,134 +237,42 @@ class _BuildBodyState extends State<BuildBody> {
     );
   }
 
-  buildScrollItem(String name, IconData icon, int index) {
+  Widget buildmenuItem(int index, String title, Size size) {
     return GestureDetector(
       onTap: () {
         setState(() {
           selectedItem = index;
         });
-        buildBottomSheet(index);
+        showBottomSheet(
+          context: context,
+          builder: (context) {
+            return kategoriSelected[selectedItem];
+          },
+        );
       },
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 5),
-        margin: const EdgeInsets.symmetric(horizontal: 5),
+        padding: const EdgeInsets.all(5),
+        margin:
+            EdgeInsets.symmetric(horizontal: size.width * 0.01, vertical: 5),
         decoration: BoxDecoration(
             border: Border.all(
-                color: selectedItem == index ? primary900 : neutral300),
+                color: selectedItem == index ? primary900 : neutral500),
             borderRadius: BorderRadius.circular(10)),
-        height: 40,
         child: Row(
           children: [
             Text(
-              name,
-              style: text4(neutral500, regular),
+              title,
+              style: text4(
+                  selectedItem == index ? primary900 : neutral500, regular),
             ),
-            Icon(
-              icon,
+            const SizedBox(width: 10),
+            const Icon(
+              IconlyLight.arrowDown2,
               size: 20,
-              color: selectedItem == index ? primary900 : neutral300,
             )
           ],
         ),
       ),
     );
-  }
-
-  buildBottomSheet(int index) {
-    return showModalBottomSheet(
-        backgroundColor: Colors.transparent,
-        context: context,
-        builder: (BuildContext context) {
-          return Container(
-            height: 350,
-            padding: const EdgeInsets.all(20),
-            decoration: const BoxDecoration(
-                color: neutral100,
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(40),
-                    topRight: Radius.circular(40))),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    const Icon(
-                      Icons.cancel_sharp,
-                      color: neutral200,
-                      size: 25,
-                    ),
-                    const SizedBox(width: 10),
-                    Text("Urutkan", style: text2(neutral500, regular))
-                  ],
-                ),
-                const SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text("Ulasan Terbanyak",
-                          style: text2(neutral500, regular)),
-                      const Icon(
-                        Icons.done,
-                        color: primary900,
-                        size: 30,
-                      ),
-                    ],
-                  ),
-                ),
-                const Divider(thickness: 2, color: neutral200),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text("Harga Tertinggi",
-                          style: text2(neutral500, regular)),
-                      const Icon(
-                        Icons.done,
-                        color: primary900,
-                        size: 30,
-                      ),
-                    ],
-                  ),
-                ),
-                const Divider(thickness: 2, color: neutral200),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text("Harga Terendah", style: text2(neutral500, regular)),
-                      const Icon(
-                        Icons.done,
-                        color: primary900,
-                        size: 30,
-                      ),
-                    ],
-                  ),
-                ),
-                const Divider(thickness: 2, color: neutral200),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text("Pembelian Terbanyak",
-                          style: text2(neutral500, regular)),
-                      const Icon(
-                        Icons.done,
-                        color: primary900,
-                        size: 30,
-                      ),
-                    ],
-                  ),
-                ),
-                const Divider(thickness: 2, color: neutral200)
-              ],
-            ),
-          );
-        });
   }
 }

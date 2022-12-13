@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:marketplace/presentation/screens/artikel_screen/artikel.dart';
 import 'package:marketplace/presentation/screens/favorite_screen/fovorite_screen.dart';
-import 'package:marketplace/presentation/screens/history_screen.dart/history_screen.dart';
+import 'package:marketplace/presentation/screens/history_screen/history_screen.dart';
+import 'package:marketplace/presentation/screens/home_screen/home_screen.dart';
 import 'package:marketplace/utilities/color.dart';
 import 'package:marketplace/utilities/text_styles.dart';
 
@@ -15,7 +16,7 @@ class Navigation extends StatefulWidget {
 
 class _NavigationState extends State<Navigation> {
   List pages = const [
-    Text("0"),
+    HomeScreen(),
     ArtikelScreen(),
     FavoriteScreen(),
     HistoryScreen(),
