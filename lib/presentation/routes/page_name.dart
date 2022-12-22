@@ -11,4 +11,10 @@ abstract class RouteName {
   static const keranjang = '/keranjang';
   static const notifikasi = '/notifikasi';
   static const detailHistory = '/detailHistory';
+  static const detailProduk = '/detailProduk';
+  static const detailProfile = '/detailProfile';
+  static const faq = '/faq';
+  static const ulasan = '/ulasan';
+  static const pesananSaya = '/pesananSaya';
+  static const orderProduct = '/orderProduct';
 }

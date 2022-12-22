@@ -4,6 +4,7 @@ import 'package:marketplace/presentation/screens/artikel_screen/artikel.dart';
 import 'package:marketplace/presentation/screens/favorite_screen/fovorite_screen.dart';
 import 'package:marketplace/presentation/screens/history_screen/history_screen.dart';
 import 'package:marketplace/presentation/screens/home_screen/home_screen.dart';
+import 'package:marketplace/presentation/screens/profile_screen/profil_screen.dart';
 import 'package:marketplace/utilities/color.dart';
 import 'package:marketplace/utilities/text_styles.dart';
 
@@ -20,7 +21,7 @@ class _NavigationState extends State<Navigation> {
     ArtikelScreen(),
     FavoriteScreen(),
     HistoryScreen(),
-    Text("5"),
+    ProfileScreen(),
   ];
   int _selectedItemIndex = 0;
 

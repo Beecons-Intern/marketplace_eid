@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
 import 'package:marketplace/utilities/color.dart';
@@ -16,7 +14,7 @@ class BuildBody extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: size.height * 0.8,
+            height: size.height * 0.78,
             child: SingleChildScrollView(
               scrollDirection: Axis.vertical,
               child: Column(
@@ -46,7 +44,7 @@ class BuildBody extends StatelessWidget {
               onTap: () {},
               child: Container(
                 margin: const EdgeInsets.all(5),
-                padding: const EdgeInsets.all(15),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: primary900,
                   borderRadius: BorderRadius.circular(10),

@@ -14,7 +14,6 @@ class BuildBody extends StatefulWidget {
 }
 
 class _BuildBodyState extends State<BuildBody> {
-  int selectedItem = 0;
   int indexPages = 0;
   int indexOptions = 0;
 
@@ -172,118 +171,7 @@ class _BuildBodyState extends State<BuildBody> {
                         ),
                       ),
                     ],
-                  )
-                  // Column(
-                  //   mainAxisSize: MainAxisSize.min,
-                  //   children: [
-                  //     Row(
-                  //       mainAxisAlignment: MainAxisAlignment.start,
-                  //       children: [
-                  //         const Icon(
-                  //           Icons.cancel_sharp,
-                  //           color: neutral200,
-                  //           size: 25,
-                  //         ),
-                  //         const SizedBox(width: 10),
-                  //         Text("Mau lihat status apa ?",
-                  //             style: text2(neutral400, bold))
-                  //       ],
-                  //     ),
-                  //     const SizedBox(height: 10),
-                  //     GestureDetector(
-                  //       onTap: () {},
-                  //       child: Padding(
-                  //         padding: const EdgeInsets.all(8.0),
-                  //         child: Row(
-                  //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //           children: [
-                  //             Text("Menunggu Konfirmasi",
-                  //                 style: text3(neutral500, regular)),
-                  //             const Icon(
-                  //               Icons.done,
-                  //               color: primary900,
-                  //               size: 30,
-                  //             ),
-                  //           ],
-                  //         ),
-                  //       ),
-                  //     ),
-                  //     const Divider(thickness: 1, color: neutral200),
-                  //     GestureDetector(
-                  //       onTap: () {},
-                  //       child: Padding(
-                  //         padding: const EdgeInsets.all(8.0),
-                  //         child: Row(
-                  //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //           children: [
-                  //             Text("Diproses", style: text3(neutral500, regular)),
-                  //             const Icon(
-                  //               Icons.done,
-                  //               color: primary900,
-                  //               size: 30,
-                  //             ),
-                  //           ],
-                  //         ),
-                  //       ),
-                  //     ),
-                  //     const Divider(thickness: 1, color: neutral200),
-                  //     GestureDetector(
-                  //       onTap: () {},
-                  //       child: Padding(
-                  //         padding: const EdgeInsets.all(8.0),
-                  //         child: Row(
-                  //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //           children: [
-                  //             Text("Dikirim", style: text3(neutral500, regular)),
-                  //             const Icon(
-                  //               Icons.done,
-                  //               color: primary900,
-                  //               size: 30,
-                  //             ),
-                  //           ],
-                  //         ),
-                  //       ),
-                  //     ),
-                  //     const Divider(thickness: 1, color: neutral200),
-                  //     GestureDetector(
-                  //       onTap: () {},
-                  //       child: Padding(
-                  //         padding: const EdgeInsets.all(8.0),
-                  //         child: Row(
-                  //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //           children: [
-                  //             Text("Tiba Ditujuan",
-                  //                 style: text3(neutral500, regular)),
-                  //             const Icon(
-                  //               Icons.done,
-                  //               color: primary900,
-                  //               size: 30,
-                  //             ),
-                  //           ],
-                  //         ),
-                  //       ),
-                  //     ),
-                  //     const Divider(thickness: 1, color: neutral200),
-                  //     GestureDetector(
-                  //       onTap: () {},
-                  //       child: Padding(
-                  //         padding: const EdgeInsets.all(8.0),
-                  //         child: Row(
-                  //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  //           children: [
-                  //             Text("Dikomplain", style: text3(neutral500, regular)),
-                  //             const Icon(
-                  //               Icons.done,
-                  //               color: primary900,
-                  //               size: 30,
-                  //             ),
-                  //           ],
-                  //         ),
-                  //       ),
-                  //     ),
-                  //   ],
-                  // ),
-                  ),
+                  )),
             );
           },
         );
@@ -294,14 +182,14 @@ class _BuildBodyState extends State<BuildBody> {
             EdgeInsets.symmetric(horizontal: size.width * 0.01, vertical: 5),
         decoration: BoxDecoration(
             border: Border.all(
-                color: selectedItem == index ? primary900 : neutral500),
+                color: indexOptions == index ? primary900 : neutral500),
             borderRadius: BorderRadius.circular(10)),
         child: Row(
           children: [
             Text(
               title,
               style: text4(
-                  selectedItem == index ? primary900 : neutral500, regular),
+                  indexOptions == index ? primary900 : neutral500, regular),
             ),
             const SizedBox(width: 10),
             const Icon(

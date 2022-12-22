@@ -83,7 +83,7 @@ class BuildMenuHome extends StatelessWidget {
                   scale: 0.8,
                 ),
                 title: Text(
-                  "Pintu",
+                  "Pintu ",
                   style: text4(neutral500, regular),
                 ),
               ),

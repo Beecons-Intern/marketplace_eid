@@ -1,9 +1,14 @@
 import 'package:marketplace/presentation/routes/page_name.dart';
 import 'package:marketplace/presentation/screens/detail_chat_screen.dart/detail_chat_screen.dart';
 import 'package:marketplace/presentation/screens/detail_history_screen/detail_history_screen.dart';
+import 'package:marketplace/presentation/screens/detail_product/detail_procut_screen.dart';
+import 'package:marketplace/presentation/screens/detail_profil/detail_profil_screen.dart';
+import 'package:marketplace/presentation/screens/faq_screen/faq_screen.dart';
 import 'package:marketplace/presentation/screens/keranjang_screen/keranjang_screen.dart';
 import 'package:marketplace/presentation/screens/notification_screen/notifikasi_screen.dart';
-
+import 'package:marketplace/presentation/screens/order_product_screen/order_product._screen.dart';
+import 'package:marketplace/presentation/screens/pesanan_saya_screen/pesanan_saya_screen.dart';
+import 'package:marketplace/presentation/screens/ulasan_screen/ulasan_screen.dart';
 import '../screens/artikel_screen/artikel.dart';
 import '../screens/chat_screen/chat_screen.dart';
 import '../screens/detail_artikel_screen/detail_artikel_screen.dart';
@@ -27,5 +32,11 @@ class AppPage {
     RouteName.keranjang: (context) => const KeranjangScreen(),
     RouteName.notifikasi: (context) => const NotifikasiScreen(),
     RouteName.detailHistory: (context) => const DetailHistoryScreen(),
+    RouteName.detailProduk: (context) => const DetailProductScreen(),
+    RouteName.detailProfile: (context) => const DetailProfilScreen(),
+    RouteName.faq: (context) => const FAQScreen(),
+    RouteName.pesananSaya: (context) => const PesananSayaScreen(),
+    RouteName.ulasan: (context) => const UlasanScreen(),
+    RouteName.orderProduct: (context) => const OrderProductScreen(),
   };
 }

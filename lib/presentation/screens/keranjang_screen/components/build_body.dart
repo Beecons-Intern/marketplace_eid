@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
+import 'package:marketplace/presentation/routes/page_name.dart';
 import 'package:marketplace/presentation/screens/keranjang_screen/components/build_listview.dart';
 import 'package:marketplace/utilities/color.dart';
 import 'package:marketplace/utilities/text_styles.dart';
@@ -43,7 +44,8 @@ class _BuildBodyState extends State<BuildBody> {
             ),
           ),
         ),
-        Expanded(
+        SizedBox(
+          height: size.height * 0.67,
           child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             child: Column(
@@ -74,6 +76,36 @@ class _BuildBodyState extends State<BuildBody> {
             ),
           ),
         ),
+        Expanded(
+          child: Stack(
+            children: [
+              Positioned(
+                right: 20,
+                left: 20,
+                bottom: 20,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, RouteName.orderProduct);
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.all(10),
+                    width: size.width,
+                    decoration: BoxDecoration(
+                      color: primary900,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Order",
+                        style: text2(neutral100, regular),
+                      ),
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+        )
       ],
     );
   }

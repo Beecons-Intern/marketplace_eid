@@ -8,20 +8,23 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Stack(
-      alignment: Alignment.topCenter,
-      children: [
-        Positioned(
-          child: BuildAppbar(
-            size: Size(size.width, size.height * 0.6),
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
+      child: Stack(
+        alignment: Alignment.topCenter,
+        children: [
+          Positioned(
+            child: BuildAppbar(
+              size: Size(size.width, size.height * 0.6),
+            ),
           ),
-        ),
-        Positioned(
-            child: Padding(
-          padding: EdgeInsets.only(top: size.height * 0.1),
-          child: const BodyHomeScreen(),
-        )),
-      ],
+          Positioned(
+              child: Padding(
+            padding: EdgeInsets.only(top: size.height * 0.08),
+            child: const BodyHomeScreen(),
+          )),
+        ],
+      ),
     );
   }
 }
