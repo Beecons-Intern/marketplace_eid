@@ -123,69 +123,76 @@ class _BuildBodyState extends State<BuildBody> {
         ),
 
         //PT American Standard
-        Container(
-          margin: EdgeInsets.symmetric(horizontal: size.width * 0.05),
-          padding: const EdgeInsets.all(10),
-          decoration: BoxDecoration(
-              border: Border.all(color: neutral200),
-              borderRadius: BorderRadius.circular(5)),
-          child:
-              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                CircleAvatar(
-                  maxRadius: 20,
-                  minRadius: 20,
-                  backgroundColor: neutral100,
-                  child: Image.asset("assets/images/profile-perusahaan.png"),
-                ),
-                SizedBox(width: size.width * 0.04),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "PT. American Standard",
-                      style: text3(neutral400, regular),
+        GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, RouteName.suplier);
+          },
+          child: Container(
+            margin: EdgeInsets.symmetric(horizontal: size.width * 0.05),
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+                border: Border.all(color: neutral200),
+                borderRadius: BorderRadius.circular(5)),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      CircleAvatar(
+                        maxRadius: 20,
+                        minRadius: 20,
+                        backgroundColor: neutral100,
+                        child:
+                            Image.asset("assets/images/profile-perusahaan.png"),
+                      ),
+                      SizedBox(width: size.width * 0.04),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "PT. American Standard",
+                            style: text3(neutral400, regular),
+                          ),
+                          Row(
+                            children: [
+                              const Icon(
+                                Icons.location_on,
+                                color: neutral200,
+                                size: 20,
+                              ),
+                              SizedBox(width: size.width * 0.02),
+                              Text(
+                                "Jakarta Pusat",
+                                style: text4(neutral200, regular),
+                              ),
+                              SizedBox(width: size.width * 0.02),
+                              Text(
+                                "98% rating toko",
+                                style: text4(neutral200, regular),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Container(
+                    width: size.width * 0.16,
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: primary900,
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.location_on,
-                          color: neutral200,
-                          size: 20,
-                        ),
-                        SizedBox(width: size.width * 0.02),
-                        Text(
-                          "Jakarta Pusat",
-                          style: text4(neutral200, regular),
-                        ),
-                        SizedBox(width: size.width * 0.02),
-                        Text(
-                          "98% rating toko",
-                          style: text4(neutral200, regular),
-                        ),
-                      ],
+                    child: Center(
+                      child: Text(
+                        "ikuti",
+                        style: text4(neutral100, regular),
+                      ),
                     ),
-                  ],
-                ),
-              ],
-            ),
-            Container(
-              width: size.width * 0.16,
-              padding: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                color: primary900,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Center(
-                child: Text(
-                  "ikuti",
-                  style: text4(neutral100, regular),
-                ),
-              ),
-            )
-          ]),
+                  )
+                ]),
+          ),
         ),
         SizedBox(height: size.height * 0.04),
 

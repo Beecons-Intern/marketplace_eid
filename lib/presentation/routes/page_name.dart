@@ -16,5 +16,6 @@ abstract class RouteName {
   static const faq = '/faq';
   static const ulasan = '/ulasan';
   static const pesananSaya = '/pesananSaya';
+  static const suplier = 'suplier';
   static const orderProduct = '/orderProduct';
 }

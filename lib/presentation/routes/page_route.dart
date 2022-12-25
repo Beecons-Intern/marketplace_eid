@@ -8,6 +8,7 @@ import 'package:marketplace/presentation/screens/keranjang_screen/keranjang_scre
 import 'package:marketplace/presentation/screens/notification_screen/notifikasi_screen.dart';
 import 'package:marketplace/presentation/screens/order_product_screen/order_product._screen.dart';
 import 'package:marketplace/presentation/screens/pesanan_saya_screen/pesanan_saya_screen.dart';
+import 'package:marketplace/presentation/screens/suplier_Screen/suplier_screen.dart';
 import 'package:marketplace/presentation/screens/ulasan_screen/ulasan_screen.dart';
 import '../screens/artikel_screen/artikel.dart';
 import '../screens/chat_screen/chat_screen.dart';
@@ -38,5 +39,6 @@ class AppPage {
     RouteName.pesananSaya: (context) => const PesananSayaScreen(),
     RouteName.ulasan: (context) => const UlasanScreen(),
     RouteName.orderProduct: (context) => const OrderProductScreen(),
+    RouteName.suplier: (context) => const SuplierScreen(),
   };
 }
