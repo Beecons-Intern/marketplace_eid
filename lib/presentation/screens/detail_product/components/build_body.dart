@@ -146,7 +146,7 @@ class _BuildBodyState extends State<BuildBody> {
                         child:
                             Image.asset("assets/images/profile-perusahaan.png"),
                       ),
-                      SizedBox(width: size.width * 0.04),
+                      SizedBox(width: size.width * 0.02),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -166,7 +166,7 @@ class _BuildBodyState extends State<BuildBody> {
                                 "Jakarta Pusat",
                                 style: text4(neutral200, regular),
                               ),
-                              SizedBox(width: size.width * 0.02),
+                              SizedBox(width: size.width * 0.01),
                               Text(
                                 "98% rating toko",
                                 style: text4(neutral200, regular),
@@ -261,8 +261,8 @@ class _BuildBodyState extends State<BuildBody> {
                         builder: (context) => Container(
                           height: size.height * 0.45,
                           width: size.width,
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 10),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: size.width * 0.05, vertical: 10),
                           decoration: const BoxDecoration(
                             color: neutral100,
                             boxShadow: [
@@ -320,6 +320,7 @@ class _BuildBodyState extends State<BuildBody> {
                                 style: text2(neutral500, regular),
                               ),
                               Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   SizedBox(height: size.height * 0.02),
                                   Row(
@@ -331,9 +332,12 @@ class _BuildBodyState extends State<BuildBody> {
                                           borderRadius:
                                               BorderRadius.circular(5),
                                         ),
-                                        child: Text("CEAS5312-1000422CO"),
+                                        child: Text(
+                                          "CEAS5312-1000422CO",
+                                          style: text4(neutral500, regular),
+                                        ),
                                       ),
-                                      SizedBox(width: size.width * 0.04),
+                                      SizedBox(width: size.width * 0.05),
                                       Container(
                                         padding: const EdgeInsets.all(5),
                                         decoration: BoxDecoration(
@@ -341,7 +345,11 @@ class _BuildBodyState extends State<BuildBody> {
                                           borderRadius:
                                               BorderRadius.circular(5),
                                         ),
-                                        child: Text("CEAS5312-1000422CO"),
+                                        child: Text(
+                                          "CEAS5312-1000422CO",
+                                          style: text4(neutral500, regular),
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
                                       )
                                     ],
                                   ),
@@ -355,9 +363,12 @@ class _BuildBodyState extends State<BuildBody> {
                                           borderRadius:
                                               BorderRadius.circular(5),
                                         ),
-                                        child: Text("CEAS5312-1000422CO"),
+                                        child: Text(
+                                          "CEAS5312-1000422CO",
+                                          style: text4(neutral500, regular),
+                                        ),
                                       ),
-                                      SizedBox(width: size.width * 0.04),
+                                      SizedBox(width: size.width * 0.05),
                                       Container(
                                         padding: const EdgeInsets.all(5),
                                         decoration: BoxDecoration(
@@ -365,7 +376,11 @@ class _BuildBodyState extends State<BuildBody> {
                                           borderRadius:
                                               BorderRadius.circular(5),
                                         ),
-                                        child: Text("CEAS5312-1000422CO"),
+                                        child: Text(
+                                          "CEAS5312-1000422CO",
+                                          style: text4(neutral500, regular),
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
                                       )
                                     ],
                                   ),

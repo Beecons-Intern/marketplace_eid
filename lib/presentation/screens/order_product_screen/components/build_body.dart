@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marketplace/presentation/routes/page_name.dart';
 import 'package:marketplace/utilities/color.dart';
 import 'package:marketplace/utilities/text_styles.dart';
 
@@ -17,7 +18,9 @@ class BuildBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ListTile(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RouteName.alamat);
+              },
               title: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

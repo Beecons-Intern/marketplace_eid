@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marketplace/presentation/routes/page_name.dart';
 import 'package:marketplace/presentation/screens/widget/rounded_menu.dart';
 import 'package:marketplace/utilities/color.dart';
 import 'package:marketplace/utilities/text_styles.dart';
@@ -15,7 +16,9 @@ class BuildMenuHome extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RouteName.favorite);
+              },
               child: RoundedMenu(
                 lebar: size.width * 0.18,
                 tinggi: size.height * 0.1,
@@ -28,7 +31,9 @@ class BuildMenuHome extends StatelessWidget {
             ),
             SizedBox(width: size.width * 0.05),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RouteName.favorite);
+              },
               child: RoundedMenu(
                 lebar: size.width * 0.18,
                 tinggi: size.height * 0.1,
@@ -41,7 +46,9 @@ class BuildMenuHome extends StatelessWidget {
             ),
             SizedBox(width: size.width * 0.05),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RouteName.favorite);
+              },
               child: RoundedMenu(
                 lebar: size.width * 0.18,
                 tinggi: size.height * 0.1,
@@ -54,7 +61,9 @@ class BuildMenuHome extends StatelessWidget {
             ),
             SizedBox(width: size.width * 0.05),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RouteName.favorite);
+              },
               child: RoundedMenu(
                 lebar: size.width * 0.18,
                 tinggi: size.height * 0.1,
@@ -74,7 +83,9 @@ class BuildMenuHome extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RouteName.favorite);
+              },
               child: RoundedMenu(
                 lebar: size.width * 0.18,
                 tinggi: size.height * 0.1,
@@ -90,7 +101,9 @@ class BuildMenuHome extends StatelessWidget {
             ),
             SizedBox(width: size.width * 0.03),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RouteName.favorite);
+              },
               child: RoundedMenu(
                 lebar: size.width * 0.18,
                 tinggi: size.height * 0.1,
@@ -103,7 +116,9 @@ class BuildMenuHome extends StatelessWidget {
             ),
             SizedBox(width: size.width * 0.05),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RouteName.favorite);
+              },
               child: RoundedMenu(
                 lebar: size.width * 0.18,
                 tinggi: size.height * 0.1,
@@ -116,7 +131,9 @@ class BuildMenuHome extends StatelessWidget {
             ),
             SizedBox(width: size.width * 0.05),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RouteName.favorite);
+              },
               child: RoundedMenu(
                 lebar: size.width * 0.18,
                 tinggi: size.height * 0.1,

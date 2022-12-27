@@ -22,6 +22,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(size.height * 0.08),
         child: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
           elevation: 0,
           title: FormBuilder(

@@ -161,7 +161,7 @@ class _BuildListviewSelesaiState extends State<BuildListviewSelesai> {
                     children: [
                       Container(
                         padding: EdgeInsets.symmetric(
-                            horizontal: size.width * 0.05,
+                            horizontal: size.width * 0.04,
                             vertical: size.height * 0.01),
                         decoration: BoxDecoration(
                             border: Border.all(color: primary900),
@@ -176,7 +176,7 @@ class _BuildListviewSelesaiState extends State<BuildListviewSelesai> {
                       SizedBox(width: size.width * 0.02),
                       Container(
                         padding: EdgeInsets.symmetric(
-                            horizontal: size.width * 0.05,
+                            horizontal: size.width * 0.04,
                             vertical: size.height * 0.01),
                         decoration: BoxDecoration(
                             border: Border.all(color: primary900),

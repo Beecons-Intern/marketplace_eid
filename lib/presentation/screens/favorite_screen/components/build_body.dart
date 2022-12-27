@@ -129,7 +129,7 @@ class _BuildBodyState extends State<BuildBody> {
                         children: [
                           Padding(
                             padding: EdgeInsets.symmetric(
-                                vertical: size.height * 0.05),
+                                vertical: size.height * 0.025),
                             child: Center(
                               child: Image.asset('assets/images/toilet.png'),
                             ),
@@ -161,22 +161,25 @@ class _BuildBodyState extends State<BuildBody> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Row(
-                          children: [
-                            const Icon(
-                              IconlyBroken.home,
-                              color: primary900,
-                              size: 20,
-                            ),
-                            const SizedBox(
-                              width: 5,
-                            ),
-                            Text(
-                              "PT Wahana Duta Jayaa..",
-                              style: text4(neutral300, regular),
-                            )
-                          ],
+                        padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                        child: SizedBox(
+                          child: Row(
+                            children: [
+                              const Icon(
+                                IconlyBroken.home,
+                                color: primary900,
+                                size: 20,
+                              ),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                "PT Wahana Duta Jaya",
+                                style: text4(neutral300, regular),
+                                overflow: TextOverflow.ellipsis,
+                              )
+                            ],
+                          ),
                         ),
                       ),
                       Padding(

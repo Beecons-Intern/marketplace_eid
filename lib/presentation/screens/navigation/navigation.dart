@@ -40,11 +40,11 @@ class _NavigationState extends State<Navigation> {
             buildNavbarItem(size, IconlyLight.document, IconlyBroken.document,
                 "Article", 1),
             buildNavbarItem(
-                size, IconlyLight.heart, IconlyBroken.heart, "fovorite", 2),
+                size, IconlyLight.heart, IconlyBroken.heart, "Fovorite", 2),
             buildNavbarItem(size, IconlyLight.activity, IconlyBroken.activity,
-                "Hisotry", 3),
+                "History", 3),
             buildNavbarItem(
-                size, IconlyLight.profile, IconlyBroken.profile, "person", 4),
+                size, IconlyLight.profile, IconlyBroken.profile, "Profile", 4),
           ],
         ),
       ),

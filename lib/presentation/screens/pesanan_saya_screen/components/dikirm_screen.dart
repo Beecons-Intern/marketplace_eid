@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marketplace/presentation/routes/page_name.dart';
 import 'package:marketplace/utilities/color.dart';
 import 'package:marketplace/utilities/text_styles.dart';
 
@@ -34,7 +35,9 @@ class DikirimScreen extends StatelessWidget {
               tanggalPesan: '10/09/2022',
               totalBayar: 'Rp. 3.100.000',
               tombol: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, RouteName.detailTransaksi);
+                },
                 child: Container(
                   width: size.width * 0.3,
                   height: size.height * 0.04,
@@ -60,6 +63,5 @@ class DikirimScreen extends StatelessWidget {
         }
       },
     );
-  
   }
 }

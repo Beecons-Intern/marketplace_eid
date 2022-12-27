@@ -14,8 +14,15 @@ abstract class RouteName {
   static const detailProduk = '/detailProduk';
   static const detailProfile = '/detailProfile';
   static const faq = '/faq';
+  static const favorite = '/favorite';
   static const ulasan = '/ulasan';
   static const pesananSaya = '/pesananSaya';
   static const suplier = 'suplier';
   static const orderProduct = '/orderProduct';
+  static const ubahAlamat = '/ubahAlamat';
+  static const lokasi = '/lokasi';
+  static const alamat = '/alamat';
+  static const lihatTracking = '/lihatTracking';
+  static const detailResi = '/detailResi';
+  static const detailTransaksi = '/detailTransaksi';
 }
